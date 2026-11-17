@@ -7,6 +7,7 @@
   --acento-texto: #6e1f2e;
   --laton: #b8925a; --laton-texto: #85642f;
   --vino-fondo: #4a1420; --sobre-vino: #f4efe6; --laton-claro: #e0c088;
+  --fondo-alto: #f4efe6; --fondo-cinta: #ece5d8; --laton-sobre: #85642f; --logo-filtro: brightness(0);
   --bien: #2f7a45; --mal: #d32f2f;
   --r-roja: #eb4b4b;
   --radio: 10px;
@@ -21,6 +22,7 @@
     --acento: #9b2f44; --acento-fuerte: #b23a52; --sobre-acento: #f4efe6;
     --acento-texto: #d9b77e;
     --laton: #c9a46b; --laton-texto: #d9b77e; --vino-fondo: #3d111b;
+  --fondo-alto: #17181a; --fondo-cinta: #2b2d31; --laton-sobre: #e0c088; --logo-filtro: brightness(0) invert(1);
     --bien: #5cc47a; --mal: #ff6b6b;
   }
 }
@@ -31,6 +33,7 @@
   --acento: #9b2f44; --acento-fuerte: #b23a52; --sobre-acento: #f4efe6;
   --acento-texto: #d9b77e;
   --laton: #c9a46b; --laton-texto: #d9b77e; --vino-fondo: #3d111b;
+  --fondo-alto: #17181a; --fondo-cinta: #2b2d31; --laton-sobre: #e0c088; --logo-filtro: brightness(0) invert(1);
   --bien: #5cc47a; --mal: #ff6b6b;
 }
 
@@ -88,21 +91,18 @@ a, button, input, textarea, summary { touch-action: manipulation; }
 .menu-boton[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .menu-boton[aria-expanded="true"] span:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
 
-.sobre-vino { background: var(--vino-fondo); color: var(--sobre-vino); }
-.sobre-vino :focus-visible { outline-color: var(--laton-claro); }
-.sobre-vino .boton { background: var(--sobre-vino); border-color: var(--sobre-vino); color: var(--vino-fondo); }
-.sobre-vino .boton:hover { background: #fff; border-color: #fff; }
-.sobre-vino .boton-borde { background: transparent; color: var(--sobre-vino); border-color: color-mix(in srgb, var(--sobre-vino) 38%, transparent); }
-.sobre-vino .boton-borde:hover { background: transparent; border-color: var(--laton-claro); color: var(--laton-claro); }
+.sobre-vino { background: var(--fondo-alto); color: var(--tinta); }
+.sobre-vino :focus-visible { outline-color: var(--laton-sobre); }
+.sobre-vino .boton-borde:hover { border-color: var(--laton-sobre); color: var(--laton-texto); }
 
 .hero { padding: 96px 0 112px; }
 .hero-rejilla { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 64px; align-items: center; }
-.hero-para { font-size: 15px; font-weight: 500; color: var(--laton-claro); margin-bottom: 20px; }
+.hero-para { font-size: 15px; font-weight: 500; color: var(--laton-sobre); margin-bottom: 20px; }
 .hero h1 { font-size: clamp(38px, 4.8vw, 62px); font-weight: 600; letter-spacing: -.02em; line-height: 1.05; }
 .hero h1 span { display: block; }
-.hero-sub { margin-top: 28px; font-size: 18px; color: color-mix(in srgb, var(--sobre-vino) 80%, transparent); max-width: 52ch; }
+.hero-sub { margin-top: 28px; font-size: 18px; color: var(--tinta-2); max-width: 52ch; }
 .hero-acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
-.hero-nota { margin-top: 18px; font-size: 14px; color: color-mix(in srgb, var(--sobre-vino) 66%, transparent); }
+.hero-nota { margin-top: 18px; font-size: 14px; color: var(--tinta-2); }
 
 .lote { --superficie: #fbf8f2; --tinta: #2a1a1d; --tinta-2: #5e4b4e; background: var(--superficie); color: var(--tinta);
   border-radius: 14px; box-shadow: 0 30px 60px rgba(0,0,0,.35); overflow: hidden; }
@@ -236,12 +236,12 @@ a, button, input, textarea, summary { touch-action: manipulation; }
 .estado-envio.mal { border-left-color: var(--mal); }
 .letra-pequena { font-size: 13px; color: var(--tinta-2); }
 
-.cierre .intro { margin: 0 0 24px; color: color-mix(in srgb, var(--sobre-vino) 80%, transparent); }
+.cierre .intro { margin: 0 0 24px; color: var(--tinta-2); }
 .cierre .formulario { color: var(--tinta); }
 .cierre .formulario .boton { background: var(--acento); border-color: var(--acento); color: var(--sobre-acento); }
 .cierre .formulario .boton:hover { background: var(--acento-fuerte); border-color: var(--acento-fuerte); }
-#lista-pronto .estado-envio { padding: 0 0 0 20px; border-radius: 0; background: none; border-left: 3px solid var(--laton-claro);
-  font-size: 19px; line-height: 1.55; color: color-mix(in srgb, var(--sobre-vino) 88%, transparent); }
+#lista-pronto .estado-envio { padding: 0 0 0 20px; border-radius: 0; background: none; border-left: 3px solid var(--laton-sobre);
+  font-size: 19px; line-height: 1.55; color: var(--tinta); }
 
 .pie { padding: 64px 0 28px; }
 .pie-rejilla { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
@@ -301,12 +301,12 @@ a, button, input, textarea, summary { touch-action: manipulation; }
 .anima .revela { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; transition-delay: calc(var(--i, 0) * 90ms); }
 .anima .revela.visto { opacity: 1; transform: none; }
 
-.cinta { background: #4a1420; color: var(--sobre-vino); padding: 26px 0 30px; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); }
-.cinta-texto { text-align: center; font-size: 14px; margin-bottom: 18px; color: color-mix(in srgb, var(--sobre-vino) 70%, transparent); }
+.cinta { background: var(--fondo-cinta); color: var(--tinta); padding: 26px 0 30px; overflow: hidden; border-block: 1px solid var(--borde); }
+.cinta-texto { text-align: center; font-size: 14px; margin-bottom: 18px; color: var(--tinta-2); }
 .cinta-marco { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
 .cinta-pista { display: flex; width: max-content; animation: cinta-mueve 30s linear infinite; }
 .cinta-grupo { display: flex; align-items: center; gap: 72px; padding-right: 72px; flex: none; }
-.cinta-grupo img { height: 30px; width: auto; filter: brightness(0) invert(1); opacity: .78; }
+.cinta-grupo img { height: 30px; width: auto; filter: var(--logo-filtro); opacity: .7; }
 .cinta:hover .cinta-pista { animation-play-state: paused; }
 @keyframes cinta-mueve { from { transform: translateX(-12.5%); } to { transform: translateX(0); } }
 @media (prefers-reduced-motion: reduce) { .cinta-pista { animation: none; } }
