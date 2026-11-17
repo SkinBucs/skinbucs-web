@@ -300,3 +300,13 @@ a, button, input, textarea, summary { touch-action: manipulation; }
 
 .anima .revela { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; transition-delay: calc(var(--i, 0) * 90ms); }
 .anima .revela.visto { opacity: 1; transform: none; }
+
+.cinta { background: #4a1420; color: var(--sobre-vino); padding: 26px 0 30px; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); }
+.cinta-texto { text-align: center; font-size: 14px; margin-bottom: 18px; color: color-mix(in srgb, var(--sobre-vino) 70%, transparent); }
+.cinta-marco { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
+.cinta-pista { display: flex; width: max-content; animation: cinta-mueve 30s linear infinite; }
+.cinta-grupo { display: flex; align-items: center; gap: 72px; padding-right: 72px; flex: none; }
+.cinta-grupo img { height: 30px; width: auto; filter: brightness(0) invert(1); opacity: .78; }
+.cinta:hover .cinta-pista { animation-play-state: paused; }
+@keyframes cinta-mueve { from { transform: translateX(-12.5%); } to { transform: translateX(0); } }
+@media (prefers-reduced-motion: reduce) { .cinta-pista { animation: none; } }
