@@ -297,3 +297,6 @@ a, button, input, textarea, summary { touch-action: manipulation; }
   .formulario { padding: 22px 18px; }
   .pie-rejilla { grid-template-columns: 1fr; gap: 28px; }
 }
+
+.anima .revela { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; transition-delay: calc(var(--i, 0) * 90ms); }
+.anima .revela.visto { opacity: 1; transform: none; }

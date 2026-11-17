@@ -139,3 +139,20 @@ if (pasosGuia.length && "IntersectionObserver" in window) {
   }, { rootMargin: "-45% 0px -45% 0px" });
   pasosGuia.forEach(p => mira.observe(p));
 }
+
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const grupos = [".seccion h2", ".razon", ".plan", ".acordeon details", ".cierre-lado"];
+  const blancos = [];
+  for (const sel of grupos) {
+    document.querySelectorAll(sel).forEach((el, i) => {
+      el.classList.add("revela");
+      el.style.setProperty("--i", String(sel === ".seccion h2" ? 0 : i % 4));
+      blancos.push(el);
+    });
+  }
+  document.documentElement.classList.add("anima");
+  const entra = new IntersectionObserver(es => {
+    for (const e of es) if (e.isIntersecting) { e.target.classList.add("visto"); entra.unobserve(e.target); }
+  }, { rootMargin: "0px 0px -10% 0px" });
+  blancos.forEach(el => entra.observe(el));
+}
