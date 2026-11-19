@@ -310,3 +310,18 @@ a, button, input, textarea, summary { touch-action: manipulation; }
 .cinta:hover .cinta-pista { animation-play-state: paused; }
 @keyframes cinta-mueve { from { transform: translateX(-12.5%); } to { transform: translateX(0); } }
 @media (prefers-reduced-motion: reduce) { .cinta-pista { animation: none; } }
+
+.panel-intro { max-width: 60ch; color: var(--tinta-2); margin: -16px 0 36px; }
+.panel-marco { margin: 0 auto; max-width: 800px; border: 1px solid var(--borde); border-radius: 14px; overflow: hidden; background: var(--superficie);
+  box-shadow: 0 24px 50px rgba(0,0,0,.14); }
+.panel-marco img { display: block; width: calc(100% * 800 / 785); max-width: none; height: auto; }.panel-marco figcaption { padding: 10px 16px; font-size: 13px; color: var(--tinta-2); border-top: 1px solid var(--borde); }
+.panel-noche { display: none !important; }
+:root[data-theme="dark"] .panel-dia { display: none !important; }
+:root[data-theme="dark"] .panel-noche { display: block !important; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .panel-dia { display: none !important; }
+  :root:not([data-theme="light"]) .panel-noche { display: block !important; }
+}
+
+.saltar { position: absolute; left: 12px; top: -60px; z-index: 100; padding: 12px 18px; border-radius: 8px; background: var(--acento); color: var(--sobre-acento); font-weight: 700; text-decoration: none; }
+.saltar:focus { top: 12px; }

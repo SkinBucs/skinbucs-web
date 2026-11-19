@@ -12,7 +12,12 @@
 <meta property="og:site_name" content="Skin Bucs">
 <meta property="og:title" content="Bot de trading de skins de CS2 | Skin Bucs">
 <meta property="og:description" content="Deja de refrescar y de buscar ofertas a mano: nuestro bot compra en varios mercados y vende por ti.">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://skinbucs.com/og.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="419">
+<meta property="og:image:alt" content="Skin Bucs: un bot que compra skins de CS2 y las vende por ti">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://skinbucs.com/og.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#f4efe6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1e1f22" media="(prefers-color-scheme: dark)">
@@ -25,9 +30,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=2026-11-17t">
+<link rel="stylesheet" href="styles.css?v=2026-11-19b">
 </head>
 <body>
+<a class="saltar" href="#principal">Saltar al contenido</a>
 <a class="saltar" href="#principal">Saltar al contenido</a>
 
 <header class="cabecera">
@@ -39,6 +45,7 @@
       <ul>
         <li><a href="#por-que">Por qué</a></li>
         <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#panel">El panel</a></li>
         <li><a href="#planes">Planes</a></li>
         <li><a href="#preguntas">Preguntas</a></li>
         <li><a class="boton boton-peque" href="#contacto">Lista de espera</a></li>
@@ -65,7 +72,7 @@
       <div class="hero-texto">
         <p class="hero-para">Bot de trading de skins de CS2</p>
         <h1 id="hero-titulo">Un bot que compra skins de CS2 y las vende por ti</h1>
-        <p class="hero-sub">Lo hicimos para nosotros, cansados de pasar el día mirando mercados a ver si salía algo barato. Compra una skin cuando está más barata de lo que se vende en otro, espera a que se pueda mover y la vende allí. Tú lo ves todo desde Telegram.</p>
+        <p class="hero-sub">Lo hicimos para nosotros, cansados de pasar el día mirando mercados a ver si salía algo barato. Compra una skin cuando está más barata de lo que se vende en otro, espera a que se pueda mover y la vende allí. Tú lo ves todo desde tu panel web.</p>
         <div class="hero-acciones">
           <a class="boton" href="#contacto">Apuntarme a la lista de espera</a>
           <a class="boton boton-borde" href="#como-funciona">Ver cómo funciona</a>
@@ -100,7 +107,7 @@
 
   <section id="por-que" class="seccion" aria-labelledby="por-que-titulo">
     <div class="contenedor dos-columnas">
-      <h2 id="por-que-titulo">Hace lo mismo que tú, pero no se va a dormir</h2>
+      <h2 id="por-que-titulo">Qué hace el bot por ti</h2>
       <div class="razones">
         <article class="razon">
           <h3>Llega antes que tú</h3>
@@ -161,6 +168,18 @@
     </div>
   </section>
 
+  <section id="panel" class="seccion" aria-labelledby="panel-titulo">
+    <div class="contenedor">
+      <h2 id="panel-titulo">Así se ve tu panel</h2>
+      <p class="panel-intro">Lo que llevas ganado, lo que está en camino y lo que está a la venta, en una sola página. La entras con tu cuenta de Steam. Los números de la imagen son de ejemplo.</p>
+      <figure class="panel-marco">
+        <img class="panel-dia" src="panel/panel-dia.jpg" width="800" height="632" alt="Panel de Skin Bucs con la curva de lo ganado, datos de ejemplo" loading="lazy">
+        <img class="panel-noche" src="panel/panel-noche.jpg" width="800" height="632" alt="Panel de Skin Bucs con la curva de lo ganado, datos de ejemplo, en modo noche" loading="lazy">
+        <figcaption>Datos de ejemplo</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section id="planes" class="seccion" aria-labelledby="planes-titulo">
     <div class="contenedor">
       <h2 id="planes-titulo">Pagas por meses y lo dejas cuando quieras</h2>
@@ -169,7 +188,7 @@
           <h3>Solo mirar</h3>
           <p class="plan-precio">Gratis</p>
           <ul class="plan-lista">
-            <li>Te avisa por Telegram de lo que compraría</li>
+            <li>Te enseña en tu panel lo que compraría</li>
             <li>Si te convence, la compras tú</li>
             <li>Para ver si te encaja antes de poner dinero</li>
           </ul>
@@ -183,7 +202,7 @@
             <li>Compra en varios mercados y vende en otro</li>
             <li>Eliges tus filtros entre los que usamos nosotros</li>
             <li>Un panel web con tus números; entras con Steam</li>
-            <li>Lo pausas o le preguntas desde Telegram</li>
+            <li>Lo pausas y ajustas tus normas desde el panel</li>
           </ul>
           <a class="boton" href="#contacto">Pedir plaza</a>
         </article>
@@ -293,6 +312,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=2026-11-17t" defer></script>
+<script src="script.js?v=2026-11-19b" defer></script>
 </body>
 </html>

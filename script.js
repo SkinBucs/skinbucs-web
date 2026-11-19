@@ -141,7 +141,7 @@ if (pasosGuia.length && "IntersectionObserver" in window) {
 }
 
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  const grupos = [".seccion h2", ".razon", ".plan", ".acordeon details", ".cierre-lado"];
+  const grupos = [".seccion h2", ".razon", ".plan", ".acordeon details", ".cierre-lado", ".panel-marco"];
   const blancos = [];
   for (const sel of grupos) {
     document.querySelectorAll(sel).forEach((el, i) => {
